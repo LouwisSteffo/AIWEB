@@ -1,108 +1,466 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Name</title>
-    <link rel="stylesheet" href="../CSS/MainPage.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <nav>
-        <div class="LeftLogo">
-            <a href="MainPage.html">MELOPHILE</a>
+<link rel="stylesheet" href="../CSS/Main.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+  }
+</script>
+<style>
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+</style>
+<body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
+    <div class="flex dark:text-white-800 flex-row h-screen antialiased text-gray-800">
+    <div class="flex dark:bg-black-800 flex-row w-96 bg-gray-100 p-4">
+      <div class="MenuKiri flex flex-col items-center py-4 w-20 bg-indigo-800 rounded-3xl">
+        <a href="#"
+           class="flex items-center justify-center h-12 w-12 bg-indigo-100 text-indigo-800 rounded-full">
+          <svg class="w-8 h-8"
+               fill="none"
+               stroke="currentColor"
+               viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+          </svg>
+        </a>
+        <ul class="flex flex-col space-y-2 mt-12">
+          <li>
+            <a href="#"
+               class="flex items-center">
+              <span class="flex items-center justify-center text-indigo-100 hover:bg-indigo-700 h-12 w-12 rounded-2xl">
+                <svg class="w-6 h-6"
+                     fill="none"
+                     stroke="currentColor"
+                    viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+               class="flex items-center">
+              <span class="flex items-center justify-center text-indigo-100 hover:bg-indigo-700 h-12 w-12 rounded-2xl">
+                <svg class="w-6 h-6"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+               class="flex items-center">
+              <span class="flex items-center justify-center text-indigo-100 hover:bg-indigo-700 h-12 w-12 rounded-2xl">
+                <svg class="w-6 h-6"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+               class="darkmode flex items-center">
+              <span class="flex items-center justify-center text-indigo-100 hover:bg-indigo-700 h-12 w-12 rounded-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                </svg>                
+              </span>
+            </a>
+          </li>
+        </ul>
+       
+      </div>
+      
+    <div class="flex flex-col h-full w-full bg-white px-4 py-6">
+      <div class="flex flex-row items-center py-4 px-6 rounded-2xl shadow">
+        <div class="bg-grey-900">
+          <img width="40px" src="../Assets/Melophile.png" alt="">
+        </div>      
+        <div class="flex flex-col ml-3">
+          <div class="font-semibold text-sm">Melophile</div>
         </div>
-        <div class="middle">
-            <div class="List">
-                <div class="Reset">
+        <div class="ml-auto">
+          <ul class="flex flex-row items-center space-x-2">
+            <li class="TombolMenu">
+              <a href="#"
+                 class="flex items-center justify-center bg-indigo-500 hover:bg-indigo-400 text-gray-400 h-10 w-10 rounded-full">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                  </svg>                    
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                 class="flex items-center justify-center bg-indigo-500 hover:bg-indigo-500 text-gray-400 h-10 w-10 rounded-full">
+                <span>
+                  <svg class="w-5 h-5"
+                       fill="none"
+                       stroke="currentColor"
+                       viewBox="0 0 24 24"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="h-full overflow-hidden py-4">
+        <div class="h-full overflow-y-auto">
+          <div class="grid grid-cols-12 gap-y-2">
+            <div class="col-start-1 col-end-8 p-3 rounded-lg">
+              <div class="flex flex-row items-center">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  M
                 </div>
+                <div
+                    class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                >
+                  <div>Hey How are you today?</div>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="RightIcon">
-            <p>Login</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-              </svg>
-        </div>
-    </nav>
+            <div class="col-start-1 col-end-8 p-3 rounded-lg">
+              <div class="flex flex-row items-center">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  M
+                </div>
+                <div
+                    class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                >
+                  <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Vel ipsa commodi illum saepe numquam maxime
+                    asperiores voluptate sit, minima perspiciatis.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-start-6 col-end-13 p-3 rounded-lg">
+              <div class="flex items-center justify-start flex-row-reverse">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  L
+                </div>
+                <div
+                    class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl"
+                >
+                  <div>I'm ok what about you?</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-start-6 col-end-13 p-3 rounded-lg">
+              <div class="flex items-center justify-start flex-row-reverse">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  L
+                </div>
+                <div
+                    class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl"
+                >
+                  <div>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing. ?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-start-1 col-end-8 p-3 rounded-lg">
+              <div class="flex flex-row items-center">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  M
+                </div>
+                <div
+                    class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                >
+                  <div>Lorem ipsum dolor sit amet !</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-start-6 col-end-13 p-3 rounded-lg">
+              <div class="flex items-center justify-start flex-row-reverse">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  L
+                </div>
+                <div
+                    class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl"
+                >
+                  <div>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing. ?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-start-1 col-end-8 p-3 rounded-lg">
+              <div class="flex flex-row items-center">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  M
+                </div>
+                <div
+                    class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                >
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis, in.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-start-1 col-end-8 p-3 rounded-lg">
+              <div class="flex flex-row items-center">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  L
+                </div>
+                <div
+                    class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                >
+                  <div class="flex flex-row items-center">
+                    <button
+                        class="flex items-center justify-center bg-indigo-600 hover:bg-indigo-800 rounded-full h-8 w-10"
+                    >
+                      <svg
+                          class="w-6 h-6 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                        ></path>
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <div class="flex flex-row items-center space-x-px ml-4">
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-4 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-12 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-6 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-5 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-4 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-3 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-10 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-1 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-1 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-8 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-2 w-1 bg-gray-500 rounded-lg"></div>
+                      <div class="h-4 w-1 bg-gray-500 rounded-lg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
 
-    <div class="container">
-        <div class="chatbox">
-            <div class="col-1">
-                <div class="msgrow msgrow2">
-                    <div class="msgtext">
-                        <h2>Louwis Bot</h2>
-                        <p>Waiting For Your Reply.</p>
-                    </div>
-                    <img src="../Assets/Lou.jpg" width="50px" class="msgimg">
+            <div class="col-start-1 col-end-8 p-3 rounded-lg">
+              <div class="flex flex-row items-center">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  M
                 </div>
-                <div class="msgrow">
-                    <img src="../Assets/Lou.jpg" width="50px" class="msgimg">
-                    <div class="msgtext">
-                        <h2>Louwis</h2>
-                        <p>Can You Recommend Me Some Music I Might Like?</p>
-                    </div>
+                <div
+                    class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                >
+                  <div>
+                    Choose Music Genre You Like.
+                  </div>
                 </div>
-                <div class="msgrow msgrow2">
-                    <div class="msgtext">
-                        <h2>Louwis Bot</h2>
-                        <p>What Kind Of Music Do You Like?</p>
-                    </div>
-                    <img src="../Assets/Lou.jpg" width="50px" class="msgimg">
-                </div>
-                <div class="msgrow">
-                    <img src="../Assets/Lou.jpg" width="50px" class="msgimg">
-                    <div class="msgtext">
-                        <h2>Louwis</h2>
-                        <p>I Like Japanese Pop</p>
-                    </div>
-                </div>
-                <div class="msgrow msgrow2">
-                    <div class="msgtext">
-                        <h2>Louwis Bot</h2>
-                        <p>Let Me Search A Music For You.....</p>
-                    </div>
-                    <img src="../Assets/Lou.jpg" width="50px" class="msgimg">
-                </div>
-                <div class="msgrow msgrow2">
-                    <div class="msgtext">
-                        <h2>Louwis Bot</h2>
-                        <p style="margin-bottom: 20px;">This Is The Music U Might Like!</p>
-                        <div class="nampungmusik">
-                            <div class="MusicRecommend">
-                                <img class="spotify" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" width="40px" alt="">
-                                <div class="textdalam">
-                                    <h3><span>Yoru Ni Kakeru </span>by Yoasobi</h3>
-                                    <p>Japanese POP</p>
-                                </div>
-                                <img class="gambaralbum" src="../Assets/YoruNiKakeru.jpg" width="70px" height="70px" alt="">
-                            </div>
-                            <div class="MusicRecommend">
-                                <img class="spotify" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" width="40px" alt="">
-                                <div class="textdalam">
-                                    <h3><span>Anone </span>by Yuika And Arekun  </h3>
-                                    <p>Japanese POP</p>
-                                </div>
-                                <img class="gambaralbum" src="https://t2.genius.com/unsafe/425x425/https%3A%2F%2Fimages.genius.com%2F169e829b01916874cb16dae582b80d9f.1000x1000x1.png" width="70px" height="70px" alt="">
-                            </div>
-                            <div class="MusicRecommend">
-                                <img class="spotify" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" width="40px" alt="">
-                                <div class="textdalam">
-                                    <h3><span>Yoru Ni Kakeru </span>by Yoasobi</h3>
-                                    <p>Japanese POP</p>
-                                </div>
-                                <img class="gambaralbum" src="../Assets/YoruNiKakeru.jpg" width="70px" height="70px" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <img src="../Assets/Lou.jpg" width="50px" class="msgimg">
-                </div>
+              </div>
             </div>
-            <div class="col-2">
-                
+
+            <div class="text-1 col-start-1 col-end-8 p-3 rounded-lg">
+              <div class="flex flex-row items-center">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  M
+                </div>
+                <div
+                    class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                >
+                <p class="mb-4">
+                  Here Are Pop Songs For You.
+                </p>
+                <div class="flex flex-col gap-5">
+                  <div class=" bg-indigo-100 p-3 hover:bg-indigo-200 rounded-xl flex flex-row items-center gap-6">
+                    <img width="70px" class="GambarGone" src="../Assets/YoruNiKakeru.jpg" alt="">
+                    <div class="flex flex-col">
+                      <p class="font-bold w-20 sm:w-15">Yoru Ni Kakeru</p>
+                      <p class="w-10">Yoasobi</p>
+                    </div>
+                    <img class="cursor-pointer" width="30px" src="../Assets/Spotify.png" alt="">
+                  </div>
+                  <div class="bg-indigo-100 p-3 hover:bg-indigo-200 rounded-xl flex flex-row items-center gap-6">
+                    <img width="70px" class="GambarGone" src="../Assets/SomeoneYouLoved.jpeg" alt="">
+                    <div class="flex flex-col">
+                      <p class="font-bold w-20 sm:w-15">Someone You Loved</p>
+                      <p class="w-10">Lewis Capaldi</p>
+                    </div>
+                    <img class="cursor-pointer" width="30px" src="../Assets/Spotify.png" alt="">
+                  </div>
+                </div>
+                </div>
+              </div>
             </div>
+
+            <div class="text-2 col-start-1 col-end-8 p-3 rounded-lg">
+              <div class="flex flex-row items-center">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  M
+                </div>
+                <div
+                    class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                >
+                <p class="mb-4">
+                  Here Are Rock Songs For You.
+                </p>
+                <div class="flex flex-col gap-5">
+                  <div class=" bg-indigo-100 p-3 hover:bg-indigo-200 rounded-xl flex flex-row items-center gap-6">
+                    <img width="70px" class="GambarGone" src="../Assets/SunsetDiTanahAnarki.jpeg" alt="">
+                    <div class="flex flex-col">
+                      <p class="font-bold w-20 sm:w-15">Sunset Di Tanah Anarki</p>
+                      <p class="w-10">Superman Is Dead</p>
+                    </div>
+                    <img class="cursor-pointer" width="30px" src="../Assets/Spotify.png" alt="">
+                  </div>
+                  <div class="bg-indigo-100 p-3 hover:bg-indigo-200 rounded-xl flex flex-row items-center gap-6">
+                    <img width="70px" class="GambarGone" src="../Assets/KotakBeraksi.jpg" alt="">
+                    <div class="flex flex-col">
+                      <p class="font-bold w-20 sm:w-15">Beraksi</p>
+                      <p class="w-10">Kotak</p>
+                    </div>
+                    <img class="cursor-pointer" width="30px" src="../Assets/Spotify.png" alt="">
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-3 col-start-1 col-end-8 p-3 rounded-lg">
+              <div class="flex flex-row items-center">
+                <div
+                    class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                >
+                  M
+                </div>
+                <div
+                    class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                >
+                <p class="mb-4">
+                  Here Are Classical Songs For You.
+                </p>
+                <div class="flex flex-col gap-5">
+                  <div class=" bg-indigo-100 p-3 hover:bg-indigo-200 rounded-xl flex flex-row items-center gap-6">
+                    <img width="70px" class="GambarGone" src="../Assets/RomanceDeAmor.jpeg" alt="">
+                    <div class="flex flex-col">
+                      <p class="font-bold w-20 sm:w-15">Romance De Amor</p>
+                      <p class="w-10">Xue Fei Yang</p>
+                    </div>
+                    <img class="cursor-pointer" width="30px" src="../Assets/Spotify.png" alt="">
+                  </div>
+                  <div class="bg-indigo-100 p-3 hover:bg-indigo-200 rounded-xl flex flex-row items-center gap-6">
+                    <img width="70px" class="GambarGone" src="../Assets/FurElise.jpg" alt="">
+                    <div class="flex flex-col">
+                      <p class="font-bold w-20 sm:w-15">Fur Elise</p>
+                      <p class="w-10">Ludwig van Beethoven</p>
+                    </div>
+                    <img class="cursor-pointer" width="30px" src="../Assets/Spotify.png" alt="">
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
+      </div>
+      <p class="mb-5">Choose Music Genre You Like:</p>
+      <div class="flex flex-row items-center">
+        <div class="group-1">
+          <button class="button-1 py-3 px-4 rounded mr-1 bg-indigo-500 text-white ">Pop</button>
+          <button class="button-2 py-3 px-4 rounded mr-1 bg-indigo-500 text-white ">Rock</button>
+          <button class="button-3 py-3 px-4 rounded mr-1 bg-indigo-500 text-white">Classical</button>
+        </div>
+      </div>
     </div>
-    <script src="../JS/DisableRightClick.js"></script>
+  </div>
 </body>
+<script src="../JS/Slide.js"></script>
+<script src="../JS/Prototype.js"></script>
 </html>

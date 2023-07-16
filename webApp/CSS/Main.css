@@ -1,0 +1,43 @@
+.TombolMenu{
+    display: none;
+}
+.text-1{
+    display: none;
+}
+.text-1.active{
+    display: block;
+}
+.group-1.active{
+    display: none;
+}
+.text-2{
+    display: none;
+}
+.text-2.active{
+    display: block;
+}
+.text-3{
+    display: none;
+}
+.text-3.active{
+    display: block;
+}
+
+@media screen and (max-width : 550px) {
+    .MenuKiri{
+        position: absolute;
+        height: 95%;
+        left: -500px;
+        transition: 1s ease;
+        /* width: 70px; */
+    }   
+    .MenuKiri.active{
+        left: 5px;
+    }
+    .TombolMenu{
+        display: flex;
+    }
+    .GambarGone{
+        display: none;
+    }
+}

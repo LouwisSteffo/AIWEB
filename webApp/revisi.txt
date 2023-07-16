@@ -1,0 +1,2 @@
+Sorting by country , Genre , Artist
+Error prevention at least need one to choose
